@@ -8,7 +8,7 @@ class Solution {
         // create array of running totals, starting with bottom of triangle        
         var totals = lastRow
 ​
-        // iterate from bottom row to top row
+        // iterate from bottom row we haven't seen yet to top row
         for row in mutableTriangle.reversed() {
             
             for (i, val) in row.enumerated() {
