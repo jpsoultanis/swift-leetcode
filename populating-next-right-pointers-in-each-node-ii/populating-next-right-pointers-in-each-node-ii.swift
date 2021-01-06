@@ -28,3 +28,10 @@ class Solution {
                 }
                 
                 if let right = curNode.right {
+                    queue.insert(right, at: 0)
+                }
+            }
+        }
+        return root
+    }
+}
