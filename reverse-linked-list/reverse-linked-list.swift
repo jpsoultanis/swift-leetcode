@@ -10,6 +10,10 @@
  */
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
+        reverseListIterative(head)
+    }
+    
+    func reverseListIterative(_ head: ListNode?) -> ListNode? {
         var prev: ListNode? = nil
         var curNode = head
         
@@ -25,5 +29,19 @@ class Solution {
         }
         
        return prev
+    }
+    
+    func reverseListRecursive(_ node: ListNode?) -> ListNode? {
+        // base case: stop at the last node
+        guard let curNode = node, curNode.next != nil else { return node }
+        
+        // recursive step
+        let head = reverseListRecursive(curNode.next)
+
+        // reverse the list direction
+        curNode.next?.next = curNode
+        curNode.next = nil
+        
+        return head
     }
 }
