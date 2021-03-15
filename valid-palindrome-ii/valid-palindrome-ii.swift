@@ -3,9 +3,7 @@ class Solution {
         let s = Array(s)
         var left = 0
         var right = s.count - 1
-        
-        var hasIgnoredChar = false
-        
+                
         while left < right {
             if s[left] == s[right] {
                 left += 1
@@ -18,7 +16,7 @@ class Solution {
             }
         }
         
-        // if we get to here, the pointers have crossed and we can build a valid palindrone
+        // if we get to here, the pointers have crossed meaning we can build a valid palindrone
         return true
     }
 }
