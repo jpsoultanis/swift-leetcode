@@ -12,9 +12,6 @@ class Solution {
         // chars with 0 incoming edges are lexiographically before others.
         var indegreeMap: [Character: Int] = buildIndegreeMap(fromGraph: graph)
         
-        print(graph)
-        print(indegreeMap)
-        
         // for BFS
         var queue = [Character]()
         
